@@ -26,7 +26,7 @@ namespace WherePigsFlyFms.Models
         public string IntestinalParasites { get; set; }
         public string IntestinalParasiteNotes { get; set; }
 
-        public int FK_Animal_ID { get; set; }
+        public int FK_Animal_Id { get; set; }
         [ForeignKey("FK_Animal_Id")]
         public Animals Animals {get;set;}
     }

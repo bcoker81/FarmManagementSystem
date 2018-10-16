@@ -14,7 +14,7 @@ namespace WherePigsFlyFms.Models
     public class Animals
     {
         [Key]
-        public int AnimalId { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Display(Name = "Tag Number")]
