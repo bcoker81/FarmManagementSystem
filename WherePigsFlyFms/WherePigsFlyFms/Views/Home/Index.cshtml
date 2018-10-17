@@ -43,7 +43,7 @@
             @foreach (var item in Model.Animals)
             {
                 <tr>
-                    @*<td>@Html.ActionLink(item.TagNumber, "Details", "Animal", new { Id = item.Id })</td>*@
+                    <td>@Html.ActionLink(item.TagNumber, "Details", "Animal", new { Id = item.Id })</td>
                     <td>@Html.DisplayFor(modelItem => item.Name)</td>
                     <td>@Html.DisplayFor(modelItem => item.BreedText)</td>
                     <td>@Html.DisplayFor(modelItem => item.Gender)</td>
@@ -52,8 +52,8 @@
 
 
                     <td style="text-align:center;">
-                        @*<a href="@Url.Action("UpdateAnimal", "Animal", new { id = item.Id })" class="btn btn-warning"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
-                        <a href="@Url.Action("Delete", "Animal", new { id = item.Id })" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>*@
+                        <a href="@Url.Action("UpdateAnimal", "Animal", new { id = item.Id })" class="btn btn-warning"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
+                        <a href="@Url.Action("Delete", "Animal", new { id = item.Id })" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                     </td>
                 </tr>
             }
@@ -91,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                @*<h4 class="modal-title">DELETE ANIMAL @Html.DisplayFor(Model => Model.Animal.Name)</h4>*@
+                <h4 class="modal-title">DELETE ANIMAL @Html.DisplayFor(Model => Model.Animal.Name)</h4>
             </div>
             <div class="modal-body">
                @* @Html.Partial("_Delete", Model)*@

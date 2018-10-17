@@ -9,10 +9,11 @@ namespace WherePigsFlyFms.ViewModels
     public class FarmViewModel
     {
         public List<Animals> Animals { get; set; }
-
+        public Animals Animal { get; set; }
         public FarmViewModel()
         {
             Animals = new List<Animals>();
+            Animal = new Animals();
         }
     }
 }
