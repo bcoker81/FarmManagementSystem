@@ -88,10 +88,10 @@ C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.A
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.AI.WindowsServer.xml
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.AI.Web.xml
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csproj.CoreCompileInputs.cache
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csproj.CopyComplete
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.dll
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.pdb
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.initialdbcreatev1.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csproj.GenerateResource.cache
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache

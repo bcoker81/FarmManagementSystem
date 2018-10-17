@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WherePigsFlyFms.Toast;
 
 namespace WherePigsFlyFms.Controllers
 {
@@ -10,6 +11,8 @@ namespace WherePigsFlyFms.Controllers
     {
         public ActionResult Index()
         {
+            this.AddToastMessage("Success!", "Data retrieved from service!", ToastType.Success);
+
             return View();
         }
 
