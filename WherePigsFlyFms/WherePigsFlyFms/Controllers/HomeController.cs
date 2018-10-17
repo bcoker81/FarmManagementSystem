@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WherePigsFlyFms.Data;
 using WherePigsFlyFms.Toast;
+using WherePigsFlyFms.UnitOfWork;
+using WherePigsFlyFms.ViewModels;
 
 namespace WherePigsFlyFms.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : FarmBaseController
     {
+       
         public ActionResult Index()
         {
-            this.AddToastMessage("Success!", "Data retrieved from service!", ToastType.Success);
+            FarmViewModel viewModel = new FarmViewModel();
+            using (var context = new FmsDbContext())
+            {
+                _uow = new FmsUoW(context);
 
-            return View();
+
+                viewModel.Animals = _uow.AnimalRepo.GetAll().ToList();
+                this.AddToastMessage("Success!", "Data retrieved from database!", ToastType.Success);
+            }
+            return View("Index", viewModel);
         }
 
         public ActionResult About()

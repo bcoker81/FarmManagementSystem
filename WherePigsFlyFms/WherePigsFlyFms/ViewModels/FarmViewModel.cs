@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using WherePigsFlyFms.Models;
+
+namespace WherePigsFlyFms.ViewModels
+{
+    public class FarmViewModel
+    {
+        public List<Animals> Animals { get; set; }
+
+        public FarmViewModel()
+        {
+            Animals = new List<Animals>();
+        }
+    }
+}
