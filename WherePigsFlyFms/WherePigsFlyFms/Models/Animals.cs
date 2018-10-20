@@ -19,8 +19,8 @@ namespace WherePigsFlyFms.Models
         public string Name { get; set; }
         [Display(Name = "Tag Number")]
         public string TagNumber { get; set; }
-        public int Breed { get; set; }
-        public string BreedText { get; set; }
+        public string Breed { get; set; }
+        //public string BreedText { get; set; }
         [Required]
         public Gender Gender { get; set; }
         public Nullable<int> Weight { get; set; }

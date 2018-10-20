@@ -94,4 +94,4 @@ C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.pdb
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.initialdbcreatev1.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csproj.GenerateResource.cache
-C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.updateddatabase.resources

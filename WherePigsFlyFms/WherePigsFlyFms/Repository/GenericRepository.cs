@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 using WherePigsFlyFms.Data;
 
@@ -25,16 +26,6 @@ namespace WherePigsFlyFms.Repository
             _context.Set<TEntity>().Remove(entity);
         }
 
-        public TEntity FindSingle(Func<TEntity, bool> predicate)
-        {
-           return _context.Set<TEntity>().Where(predicate).SingleOrDefault();
-        }
-
-        public IEnumerable<TEntity> FindMany(Func<TEntity, bool> predicate)
-        {
-           return _context.Set<TEntity>().Where(predicate);
-        }
-
         public IEnumerable<TEntity> GetAll()
         {
             return _context.Set<TEntity>().ToList();
@@ -44,9 +35,19 @@ namespace WherePigsFlyFms.Repository
         {
             var result = _context.Set<TEntity>().Find(id);
             _context.Entry(result).CurrentValues.SetValues(entity);
+
             return result;
         }
 
+        public IEnumerable<TEntity> FindMany(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _context.Set<TEntity>().Where(predicate);
+        }
+
+        public TEntity FindSingle(Func<TEntity, bool> predicate)
+        {
+            return _context.Set<TEntity>().Where(predicate).SingleOrDefault();
+        }
 
         public void Dispose()
         {

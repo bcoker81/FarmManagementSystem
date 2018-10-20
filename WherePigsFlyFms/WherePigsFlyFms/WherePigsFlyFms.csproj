@@ -164,6 +164,10 @@
     <Compile Include="Migrations\201810161930013_initialdbcreatev1.Designer.cs">
       <DependentUpon>201810161930013_initialdbcreatev1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810172212391_updateddatabase.cs" />
+    <Compile Include="Migrations\201810172212391_updateddatabase.Designer.cs">
+      <DependentUpon>201810172212391_updateddatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\MedicalRecords.cs" />
@@ -224,6 +228,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Toastr.cshtml" />
     <Content Include="Views\Shared\_RegisterAnimal.cshtml" />
+    <Content Include="Views\Home\AnimalDetails.cshtml" />
+    <Content Include="Views\Home\ViewMedicalDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810161930013_initialdbcreatev1.resx">
       <DependentUpon>201810161930013_initialdbcreatev1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810172212391_updateddatabase.resx">
+      <DependentUpon>201810172212391_updateddatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

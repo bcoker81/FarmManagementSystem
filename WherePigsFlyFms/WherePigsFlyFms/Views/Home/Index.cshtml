@@ -43,9 +43,9 @@
             @foreach (var item in Model.Animals)
             {
                 <tr>
-                    <td>@Html.ActionLink(item.TagNumber, "Details", "Animal", new { Id = item.Id })</td>
+                    <td>@Html.ActionLink(item.TagNumber, "ViewAnimalDetails",  new { Id = item.Id })</td>
                     <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                    <td>@Html.DisplayFor(modelItem => item.BreedText)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Breed)</td>
                     <td>@Html.DisplayFor(modelItem => item.Gender)</td>
                     <td>@Html.DisplayFor(modelItem => item.DateAcquired)</td>
                     <td>@Html.DisplayFor(modelItem => item.AnimalType)</td>
@@ -64,8 +64,6 @@
         </div>
     </div>
 
-
-
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
@@ -77,7 +75,7 @@
                     <h4 class="modal-title">REGISTER NEW ANIMAL</h4>
                 </div>
                 <div class="modal-body">
-                    @Html.Partial("_RegisterAnimal")
+                    @Html.Partial("_RegisterAnimal", Model)
                 </div>
             </div>
         </div>

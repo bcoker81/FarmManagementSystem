@@ -4,7 +4,8 @@
     ViewBag.Title = "RegisterAnimal";
 }
 
-@using (Html.BeginForm("Save", "Animal", FormMethod.Post))
+<br />
+@using (Html.BeginForm("SaveAnimal", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
@@ -28,7 +29,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Animal.Breed, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-sm-4">
-                @*@Html.DropDownList("", Model.Breeds as SelectList,"Select Breed")*@
+                @Html.EditorFor(model => model.Animal.Breed, new { htmlAttributes = new { @class = "form-control input-sm" } })
+
                 @*@Html.DropDownListFor(model => model.SelectedBreed, Model.BreedSelection as IEnumerable<SelectListItem>, "Select a breed", new { @class = "form-control input-sm" })*@
                 @Html.ValidationMessageFor(model => model.Animal.Breed, "", new { @class = "text-danger" })
             </div>
