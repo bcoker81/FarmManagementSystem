@@ -1,152 +1,153 @@
 ﻿@model WherePigsFlyFms.ViewModels.FarmViewModel
 
-<div>
-    <h4>MedicalRecords</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.DogParvovirus)
-        </dt>
+@Html.ActionLink("Add New Medical Record","", string.Empty, new { @class="btn btn-primary" })
+<br />
+<div class="form-control">
+<div class="form-group">
+    @Html.LabelFor(model => model.MedicalRecord.DogParvovirus)
+    <div class="col-sm-4">
+        @Html.DisplayFor(model => model.MedicalRecord.DogParvovirus)
+    </div>
+    </div>
+    
+    @Html.LabelFor(model => model.MedicalRecord.DogDistemper)
+    <div class="col-sm-4">
+        @Html.DisplayFor(model => model.MedicalRecord.DogDistemper)
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.DogParvovirus)
-        </dd>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.DogDistemper)
-        </dt>
+    @Html.LabelFor(model => model.MedicalRecord.DogHepatitis)
+    <div class="col-sm-4">
+        @Html.DisplayFor(model => model.MedicalRecord.DogHepatitis)
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.DogDistemper)
-        </dd>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.DogHepatitis)
-        </dt>
+    
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.DogHepatitis)
-        </dd>
+<dl class="dl-horizontal">
+    
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.DogLeptospirosis)
-        </dt>
+   
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.DogLeptospirosis)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.DogLeptospirosis)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.DogBordetella)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.DogLeptospirosis)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.DogBordetella)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.DogBordetella)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.OtherCare)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.DogBordetella)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.OtherCare)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.OtherCare)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.Microchip)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.OtherCare)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.Microchip)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.Microchip)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.MicrochipDate)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.Microchip)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.MicrochipDate)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.MicrochipDate)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.RabiesVac)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.MicrochipDate)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.RabiesVac)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.RabiesVac)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.Catpanleuk)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.RabiesVac)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.Catpanleuk)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.Catpanleuk)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.CatRespVirus)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.Catpanleuk)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.CatRespVirus)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.CatRespVirus)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.EctoParasites)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.CatRespVirus)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.EctoParasites)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.EctoParasites)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.EctoParasiteNotes)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.EctoParasites)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.EctoParasiteNotes)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.EctoParasiteNotes)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.BloodParasites)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.EctoParasiteNotes)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.BloodParasites)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.BloodParasites)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.BloodParasiteNotes)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.BloodParasites)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.BloodParasiteNotes)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.BloodParasiteNotes)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.IntestinalParasites)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.BloodParasiteNotes)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.IntestinalParasites)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.IntestinalParasites)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.IntestinalParasiteNotes)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.IntestinalParasites)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.IntestinalParasiteNotes)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.IntestinalParasiteNotes)
+    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.FK_Animal_Id)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.IntestinalParasiteNotes)
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.FK_Animal_Id)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.MedicalRecord.FK_Animal_Id)
+    </dt>
 
-    </dl>
+    <dd>
+        @Html.DisplayFor(model => model.MedicalRecord.FK_Animal_Id)
+    </dd>
+
+</dl>
 </div>
