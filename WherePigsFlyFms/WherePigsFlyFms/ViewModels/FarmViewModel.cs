@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using WherePigsFlyFms.Models;
 
 namespace WherePigsFlyFms.ViewModels
@@ -12,6 +13,7 @@ namespace WherePigsFlyFms.ViewModels
         public Animals Animal { get; set; }
         public List<VaccinationModel> Vaccines { get; set; }
         public VaccinationModel Vaccine { get; set; }
+        public List<SelectListItem> listValues; 
         //public MedicalRecords MedicalRecord { get; set; }
         //public List<MedicalRecords> MedicalRecords { get; set; }
 
@@ -19,6 +21,7 @@ namespace WherePigsFlyFms.ViewModels
         {
             Animals = new List<Animals>();
             Animal = new Animals();
+            listValues = new List<SelectListItem>();
             //MedicalRecord = new MedicalRecords();
             //MedicalRecords = new List<MedicalRecords>();
         }

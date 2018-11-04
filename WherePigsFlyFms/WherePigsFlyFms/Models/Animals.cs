@@ -60,6 +60,9 @@ namespace WherePigsFlyFms.Models
         [Display(Name = "Photo")]
         public string PhotoUri { get; set; }
 
+        [NotMapped]
+        public int MedicalCount { get; set; }
+
         public ICollection<VaccinationModel> Vaccines { get; set; }
         //public ICollection<MedicalRecords> MedicalRecords { get; set; }
     }

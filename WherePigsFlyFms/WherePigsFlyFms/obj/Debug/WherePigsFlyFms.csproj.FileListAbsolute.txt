@@ -101,3 +101,4 @@ C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.removedOldStuff.resources
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedvaluestolookuptable.resources
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedfieldtovaccine.resources

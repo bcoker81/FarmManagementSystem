@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201811041741116_addedvaluestolookuptable.Designer.cs">
       <DependentUpon>201811041741116_addedvaluestolookuptable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811041956488_addedfieldtovaccine.cs" />
+    <Compile Include="Migrations\201811041956488_addedfieldtovaccine.Designer.cs">
+      <DependentUpon>201811041956488_addedfieldtovaccine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\MedicalRecords.cs" />
@@ -221,6 +225,7 @@
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <Content Include="App_Code\ToastrBuilder.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -252,6 +257,8 @@
     <Content Include="Views\Shared\_RegisterAnimal.cshtml" />
     <Content Include="Views\Home\AnimalDetails.cshtml" />
     <Content Include="Views\Home\ViewMedicalDetails.cshtml" />
+    <Content Include="Views\Shared\_NewMedicalHistory.cshtml" />
+    <Content Include="Views\Home\SaveVaccineHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811041741116_addedvaluestolookuptable.resx">
       <DependentUpon>201811041741116_addedvaluestolookuptable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811041956488_addedfieldtovaccine.resx">
+      <DependentUpon>201811041956488_addedfieldtovaccine.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

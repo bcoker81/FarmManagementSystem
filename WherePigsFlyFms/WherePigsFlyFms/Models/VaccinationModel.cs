@@ -13,6 +13,7 @@ namespace WherePigsFlyFms.Models
         [Key]
         public int VaccineId { get; set; }
         public int VaccineType { get; set; }
+        public string VaccineName { get; set; }
         public string VaccineNotes { get; set; }
         public DateTime VaccineDate { get; set; }
 
