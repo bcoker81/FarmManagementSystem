@@ -160,12 +160,10 @@
     </div>
 </div>
 
-<div class="panel-primary">
-    <div class="panel-heading"><h3 style="text-align:center;">Medical History</h3></div>
-    <div class="panel-body">
-        @Html.Partial("ViewMedicalDetails", Model)
-    </div>
+<div>
+    @Html.Partial("ViewMedicalDetails", Model)
 </div>
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
