@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,7 @@ namespace WherePigsFlyFms.Models
         Male, Female
     }
 
+    [Table("Animals")]
     public class Animals
     {
         [Key]
@@ -58,6 +60,7 @@ namespace WherePigsFlyFms.Models
         [Display(Name = "Photo")]
         public string PhotoUri { get; set; }
 
-        public ICollection<MedicalRecords> MedicalRecords { get; set; }
+        public ICollection<VaccinationModel> Vaccines { get; set; }
+        //public ICollection<MedicalRecords> MedicalRecords { get; set; }
     }
 }

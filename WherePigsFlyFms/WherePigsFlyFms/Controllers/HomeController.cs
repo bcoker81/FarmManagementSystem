@@ -54,7 +54,7 @@ namespace WherePigsFlyFms.Controllers
                 _uow = new FmsUoW(context);
 
                 var result = _uow.AnimalRepo.FindSingle(p => p.Id == id);
-                viewModel.MedicalRecord = _uow.MedicalRepo.FindSingle(p => p.FK_Animal_Id == result.Id);
+                //viewModel.MedicalRecords = _uow.MedicalRepo.FindMany(p => p.FK_Animal_Id == result.Id).ToList();
                 viewModel.Animal = result;
                 this.AddToastMessage("Success!", "Animal retrieved from database!", ToastType.Success);
 
@@ -66,7 +66,7 @@ namespace WherePigsFlyFms.Controllers
         public ActionResult ViewMedicalDetails(int id)
         {
             FarmViewModel viewModel = new FarmViewModel();
-            var result = _uow.MedicalRepo.FindMany(p => p.FK_Animal_Id == id);
+            //var result = _uow.MedicalRepo.FindMany(p => p.FK_Animal_Id == id);
 
             return View();
         }

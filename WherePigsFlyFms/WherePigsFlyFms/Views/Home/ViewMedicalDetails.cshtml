@@ -3,57 +3,35 @@
 @Html.ActionLink("Add New Medical Record", "", string.Empty, new { @class = "btn btn-primary" })
 <br />
 
-<div class="form-horizontal">
-    <div class="form-group">
-        @Html.LabelFor(model => model.MedicalRecord.DogParvovirus, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-sm-4">
-            @Html.DisplayFor(model => model.MedicalRecord.DogParvovirus)
-        </div>
+<table class="table table-striped table-condensed table-hover table-bordered">
+    <tr>
+        <th>Dog Parvovirus</th>
+        <th>Dog Distemper</th>
+        <th>Dog Hepatitis</th>
+        <th>Dog Leptospirosis</th>
+        <th>Dog Bordetella</th>
+        <th>Dog Microchip</th>
+    </tr>
+    @foreach (var item in Model.MedicalRecords)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.DogParvovirus)</td>
+        <td>@Html.DisplayFor(modelItem => item.DogDistemper)</td>
+        <td>@Html.DisplayFor(modelItem => item.DogHepatitis)</td>
+        <td>@Html.DisplayFor(modelItem => item.DogLeptospirosis)</td>
+        <td>@Html.DisplayFor(modelItem => item.DogBordetella)</td>
+        <td>@Html.DisplayFor(modelItem => item.Microchip)</td>
+    </tr>
+    }
+</table>
 
-        @Html.LabelFor(model => model.MedicalRecord.DogDistemper, htmlAttributes: new { @class = "control-label col-md-2" })
+   
 
-        <div class="col-sm-4">
-            @Html.DisplayFor(model => model.MedicalRecord.DogDistemper)
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.MedicalRecord.DogHepatitis, htmlAttributes: new { @class = "control-label col-md-2" })
-
-        <div class="col-sm-4">
-            @Html.DisplayFor(model => model.MedicalRecord.DogHepatitis)
-        </div>
-
-        @Html.LabelFor(model => model.MedicalRecord.DogLeptospirosis, htmlAttributes: new { @class = "control-label col-md-2" })
-
-        <div class="col-sm-4">
-            @Html.DisplayFor(model => model.MedicalRecord.DogLeptospirosis)
-        </div>
-    </div>
+       
 
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.MedicalRecord.DogBordetella, htmlAttributes: new { @class = "control-label col-md-2" })
 
-        <div class="col-sm-4">
-            @Html.DisplayFor(model => model.MedicalRecord.DogBordetella)
-        </div>
-
-        @Html.LabelFor(model => model.MedicalRecord.Microchip, htmlAttributes: new { @class = "control-label col-md-2" })
-
-        <div class="col-sm-4">
-            @Html.DisplayFor(model => model.MedicalRecord.Microchip)
-        </div>
-    </div>
-</div>
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.MedicalRecord.DogBordetella)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MedicalRecord.DogBordetella)
-        </dd>
+  <div>
 
         <dt>
             @Html.DisplayNameFor(model => model.MedicalRecord.OtherCare)
@@ -160,4 +138,4 @@
         </dd>
 
     </dl>
-</div>*@
+</div>

@@ -11,7 +11,9 @@ namespace WherePigsFlyFms.UnitOfWork
     public class FmsUoW : IFmsUoW
     {
         private GenericRepository<Animals> _animalRepo;
-        private GenericRepository<MedicalRecords> _medicalRepo;
+        //private GenericRepository<MedicalRecords> _medicalRepo;
+        private GenericRepository<VaccinationModel> _vaccineRepo;
+        private GenericRepository<MedLookupModel> _lookupRepo;
 
         private FmsDbContext _entities;
 
@@ -32,16 +34,29 @@ namespace WherePigsFlyFms.UnitOfWork
             }
         }
 
-        public GenericRepository<MedicalRecords> MedicalRepo
+        public GenericRepository<VaccinationModel> VaccineRepo
         {
             get
             {
-                if (_medicalRepo == null)
+                if (_vaccineRepo == null)
                 {
-                    _medicalRepo = new GenericRepository<MedicalRecords>(_entities);
+                    _vaccineRepo = new GenericRepository<VaccinationModel>(_entities);
                 }
 
-                return _medicalRepo;
+                return _vaccineRepo;
+            }
+        }
+
+        public GenericRepository<MedLookupModel> LookupRepo
+        {
+            get
+            {
+                if (_lookupRepo == null)
+                {
+                    _lookupRepo = new GenericRepository<MedLookupModel>(_entities);
+                }
+
+                return _lookupRepo;
             }
         }
 

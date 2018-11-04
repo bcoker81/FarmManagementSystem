@@ -11,12 +11,14 @@ namespace WherePigsFlyFms.ViewModels
         public List<Animals> Animals { get; set; }
         public Animals Animal { get; set; }
         public MedicalRecords MedicalRecord { get; set; }
+        public List<MedicalRecords> MedicalRecords { get; set; }
 
         public FarmViewModel()
         {
             Animals = new List<Animals>();
             Animal = new Animals();
             MedicalRecord = new MedicalRecords();
+            MedicalRecords = new List<MedicalRecords>();
         }
     }
 }
