@@ -9,6 +9,7 @@ namespace WherePigsFlyFms.UnitOfWork
         //GenericRepository<MedicalRecords> MedicalRepo { get; }
         GenericRepository<MedLookupModel> LookupRepo { get; }
         GenericRepository<VaccinationModel> VaccineRepo { get; }
+        GenericRepository<AttachmentModel> AttachmentRepo { get; }
         void Commit();
     }
 }

@@ -196,6 +196,10 @@
     <Compile Include="Migrations\201811091810312_addedattachmenttable.Designer.cs">
       <DependentUpon>201811091810312_addedattachmenttable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811091839098_changedattachmentdatatypetobytearray.cs" />
+    <Compile Include="Migrations\201811091839098_changedattachmentdatatypetobytearray.Designer.cs">
+      <DependentUpon>201811091839098_changedattachmentdatatypetobytearray.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
@@ -209,6 +213,8 @@
     <Compile Include="Toast\Toastr.cs" />
     <Compile Include="UnitOfWork\FmsUoW.cs" />
     <Compile Include="UnitOfWork\IFmsUoW.cs" />
+    <Compile Include="Utilities\FmsUtilities.cs" />
+    <Compile Include="Utilities\IFmsUtilities.cs" />
     <Compile Include="ViewModels\FarmViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +271,7 @@
     <Content Include="Views\Home\ViewMedicalDetails.cshtml" />
     <Content Include="Views\Shared\_NewMedicalHistory.cshtml" />
     <Content Include="Views\Home\SaveVaccineHistory.cshtml" />
+    <Content Include="Views\Shared\_Attachment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811091810312_addedattachmenttable.resx">
       <DependentUpon>201811091810312_addedattachmenttable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091839098_changedattachmentdatatypetobytearray.resx">
+      <DependentUpon>201811091839098_changedattachmentdatatypetobytearray.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

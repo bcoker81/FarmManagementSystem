@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using WherePigsFlyFms.Data;
 using WherePigsFlyFms.Toast;
@@ -92,6 +93,13 @@ namespace WherePigsFlyFms.Controllers
         public ActionResult DeleteAnimal(int id)
         {
             return RedirectToAction("Index");
+        }
+
+        public virtual ActionResult Upload(HttpPostedFileBase file, FarmViewModel viewModel)
+        {
+            _util.Upload(file, viewModel);
+            this.AddToastMessage("Success!", "File uploaded successfully", ToastType.Success);
+            return RedirectToAction("AnimalDetails", new { id = viewModel.Animal.Id });
         }
     }
 }
