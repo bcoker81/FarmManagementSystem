@@ -192,8 +192,13 @@
     <Compile Include="Migrations\201811041956488_addedfieldtovaccine.Designer.cs">
       <DependentUpon>201811041956488_addedfieldtovaccine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811091810312_addedattachmenttable.cs" />
+    <Compile Include="Migrations\201811091810312_addedattachmenttable.Designer.cs">
+      <DependentUpon>201811091810312_addedattachmenttable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
+    <Compile Include="Models\AttachmentModel.cs" />
     <Compile Include="Models\MedicalRecords.cs" />
     <Compile Include="Models\MedLookupModel.cs" />
     <Compile Include="Models\VaccinationModel.cs" />
@@ -302,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811041956488_addedfieldtovaccine.resx">
       <DependentUpon>201811041956488_addedfieldtovaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091810312_addedattachmenttable.resx">
+      <DependentUpon>201811091810312_addedattachmenttable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

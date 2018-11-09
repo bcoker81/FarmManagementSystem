@@ -62,7 +62,7 @@ namespace WherePigsFlyFms.Models
 
         [NotMapped]
         public int MedicalCount { get; set; }
-
+        public ICollection<AttachmentModel> Attachments { get; set; }
         public ICollection<VaccinationModel> Vaccines { get; set; }
         //public ICollection<MedicalRecords> MedicalRecords { get; set; }
     }
