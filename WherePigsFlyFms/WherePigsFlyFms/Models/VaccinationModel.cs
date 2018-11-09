@@ -15,6 +15,7 @@ namespace WherePigsFlyFms.Models
         public int VaccineType { get; set; }
         public string VaccineName { get; set; }
         public string VaccineNotes { get; set; }
+        [DataType(DataType.Date)]
         public DateTime VaccineDate { get; set; }
 
         public int FK_Animal_Id { get; set; }
