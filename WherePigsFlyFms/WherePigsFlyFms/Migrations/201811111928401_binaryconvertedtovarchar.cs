@@ -3,7 +3,7 @@ namespace WherePigsFlyFms.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class changedattachmentdatatypetobytearray : DbMigration
+    public partial class binaryconvertedtovarchar : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,7 @@ namespace WherePigsFlyFms.Migrations
         
         public override void Down()
         {
-            AlterColumn("dbo.Attachments", "BaseData", c => c.String());
+            AlterColumn("dbo.Attachments", "BaseData", c => c.Binary());
         }
     }
 }

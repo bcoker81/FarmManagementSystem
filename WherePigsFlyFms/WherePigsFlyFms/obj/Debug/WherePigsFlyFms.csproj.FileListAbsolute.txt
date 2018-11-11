@@ -103,3 +103,5 @@ C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedfieldtovaccine.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedattachmenttable.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.changedattachmentdatatypetobytearray.resources
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.binaryconvertedtovarchar.resources
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache

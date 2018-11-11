@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201811091839098_changedattachmentdatatypetobytearray.Designer.cs">
       <DependentUpon>201811091839098_changedattachmentdatatypetobytearray.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811111928401_binaryconvertedtovarchar.cs" />
+    <Compile Include="Migrations\201811111928401_binaryconvertedtovarchar.Designer.cs">
+      <DependentUpon>201811111928401_binaryconvertedtovarchar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
@@ -320,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811091839098_changedattachmentdatatypetobytearray.resx">
       <DependentUpon>201811091839098_changedattachmentdatatypetobytearray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811111928401_binaryconvertedtovarchar.resx">
+      <DependentUpon>201811111928401_binaryconvertedtovarchar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
