@@ -18,7 +18,7 @@ namespace WherePigsFlyFms.Controllers
             {
                 _uow = new FmsUoW(context);
                
-                viewModel.Animals = _uow.AnimalRepo.GetAll().ToList();
+                viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
                 foreach (var item in viewModel.Animals)
                 {
                     var records = _uow.VaccineRepo.FindMany(p => p.FK_Animal_Id == item.Id);
@@ -59,7 +59,6 @@ namespace WherePigsFlyFms.Controllers
                     _uow = new FmsUoW(context);
                     _uow.AnimalRepo.Add(model.Animal);
                     _uow.Commit();
-
                 }
             }
             this.AddToastMessage("Success!", "Animal saved to database!", ToastType.Success);
@@ -100,6 +99,24 @@ namespace WherePigsFlyFms.Controllers
             _util.Upload(file, viewModel);
             this.AddToastMessage("Success!", "File uploaded successfully", ToastType.Success);
             return RedirectToAction("AnimalDetails", new { id = viewModel.Animal.Id });
+        }
+
+        public ActionResult EditAnimal(FarmViewModel model)
+        {
+            return View("_RegisterAnimal", model);
+        }
+
+        public ActionResult Archive(int id)
+        {
+            using (var context = new FmsDbContext())
+            {
+                _uow = new FmsUoW(context);
+
+                var result = _uow.AnimalRepo.FindSingle(p => p.Id == id);
+                result.Archived = true;
+                _uow.Commit();
+            }
+            return RedirectToAction("Index");
         }
     }
 }

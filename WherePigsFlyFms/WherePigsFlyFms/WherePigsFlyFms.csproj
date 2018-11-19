@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201811111928401_binaryconvertedtovarchar.Designer.cs">
       <DependentUpon>201811111928401_binaryconvertedtovarchar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811171404484_archiveAnimal.cs" />
+    <Compile Include="Migrations\201811171404484_archiveAnimal.Designer.cs">
+      <DependentUpon>201811171404484_archiveAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
@@ -222,11 +226,7 @@
     <Compile Include="ViewModels\FarmViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="Content\314298.jpg" />
-=======
-    <Content Include="Backgrounds\fARM.jpg" />
->>>>>>> 452e9d33866b1a7bf0b75b18ea23bb1eac4d9eaa
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -331,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811111928401_binaryconvertedtovarchar.resx">
       <DependentUpon>201811111928401_binaryconvertedtovarchar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811171404484_archiveAnimal.resx">
+      <DependentUpon>201811171404484_archiveAnimal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

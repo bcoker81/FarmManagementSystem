@@ -59,7 +59,7 @@ namespace WherePigsFlyFms.Models
         public Nullable<DateTime> DateEuthenizedOrDied { get; set; }
         [Display(Name = "Photo")]
         public string PhotoUri { get; set; }
-
+        public bool Archived { get; set; }
         [NotMapped]
         public int MedicalCount { get; set; }
         public ICollection<AttachmentModel> Attachments { get; set; }
