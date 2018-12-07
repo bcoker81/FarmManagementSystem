@@ -39,6 +39,7 @@ namespace WherePigsFlyFms.Utilities
         public IEnumerable<SelectListItem> GetPickList(List<PickListModel> pickList)
         {
             List<SelectListItem> list = new List<SelectListItem>();
+            return null;
 
         }
     }
