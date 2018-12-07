@@ -19,5 +19,6 @@ namespace WherePigsFlyFms.Data
         public DbSet<VaccinationModel> Vaccines { get; set; }
         public DbSet<MedLookupModel> LookupValues { get; set; }
         public DbSet<AttachmentModel> Attachments { get; set; }
+        public DbSet<PickListModel> PickList { get; set; }
     }
 }

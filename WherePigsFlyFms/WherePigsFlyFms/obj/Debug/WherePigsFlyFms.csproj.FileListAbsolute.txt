@@ -106,3 +106,6 @@ C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.binaryconvertedtovarchar.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.archiveAnimal.resources
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedwikiurltoanimal.resources
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.AddingPicklistTable.resources
+C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.updatedpicklist.resources

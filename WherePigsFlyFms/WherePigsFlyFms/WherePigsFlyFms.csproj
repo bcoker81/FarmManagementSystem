@@ -208,11 +208,24 @@
     <Compile Include="Migrations\201811171404484_archiveAnimal.Designer.cs">
       <DependentUpon>201811171404484_archiveAnimal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811251538147_addedwikiurltoanimal.cs" />
+    <Compile Include="Migrations\201811251538147_addedwikiurltoanimal.Designer.cs">
+      <DependentUpon>201811251538147_addedwikiurltoanimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071330121_AddingPicklistTable.cs" />
+    <Compile Include="Migrations\201812071330121_AddingPicklistTable.Designer.cs">
+      <DependentUpon>201812071330121_AddingPicklistTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071332141_updatedpicklist.cs" />
+    <Compile Include="Migrations\201812071332141_updatedpicklist.Designer.cs">
+      <DependentUpon>201812071332141_updatedpicklist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
     <Compile Include="Models\MedicalRecords.cs" />
     <Compile Include="Models\MedLookupModel.cs" />
+    <Compile Include="Models\PickListModel.cs" />
     <Compile Include="Models\VaccinationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
@@ -334,6 +347,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811171404484_archiveAnimal.resx">
       <DependentUpon>201811171404484_archiveAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811251538147_addedwikiurltoanimal.resx">
+      <DependentUpon>201811251538147_addedwikiurltoanimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071330121_AddingPicklistTable.resx">
+      <DependentUpon>201812071330121_AddingPicklistTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071332141_updatedpicklist.resx">
+      <DependentUpon>201812071332141_updatedpicklist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using WherePigsFlyFms.Models;
 using WherePigsFlyFms.ViewModels;
 
@@ -33,6 +34,12 @@ namespace WherePigsFlyFms.Utilities
             }
 
             return model;
+        }
+
+        public IEnumerable<SelectListItem> GetPickList(List<PickListModel> pickList)
+        {
+            List<SelectListItem> list = new List<SelectListItem>();
+
         }
     }
 }
