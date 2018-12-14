@@ -220,6 +220,10 @@
     <Compile Include="Migrations\201812071332141_updatedpicklist.Designer.cs">
       <DependentUpon>201812071332141_updatedpicklist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812141901390_UpdatedModelDefinitionForIntsForPickList.cs" />
+    <Compile Include="Migrations\201812141901390_UpdatedModelDefinitionForIntsForPickList.Designer.cs">
+      <DependentUpon>201812141901390_UpdatedModelDefinitionForIntsForPickList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
@@ -356,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812071332141_updatedpicklist.resx">
       <DependentUpon>201812071332141_updatedpicklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812141901390_UpdatedModelDefinitionForIntsForPickList.resx">
+      <DependentUpon>201812141901390_UpdatedModelDefinitionForIntsForPickList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

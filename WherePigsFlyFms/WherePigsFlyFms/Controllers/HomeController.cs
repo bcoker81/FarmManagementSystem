@@ -11,19 +11,22 @@ namespace WherePigsFlyFms.Controllers
 {
     public class HomeController : FarmBaseController
     {
-       
+
         public ActionResult Index()
         {
             FarmViewModel viewModel = new FarmViewModel();
-            
+
             using (var context = new FmsDbContext())
             {
                 _uow = new FmsUoW(context);
                 _util = new FmsUtilities();
 
-               viewModel.BreedsList = _util.GetPickList(_uow.PicklistRepo.FindMany(p => p.ListType == "Breed").ToList());
-
+                viewModel.BreedsList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "Breed").ToList());
+                viewModel.AnimalTypeList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList());
+                viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
+                viewModel.StateList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList());
                 viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
+
                 foreach (var item in viewModel.Animals)
                 {
                     var records = _uow.VaccineRepo.FindMany(p => p.FK_Animal_Id == item.Id);
@@ -108,7 +111,7 @@ namespace WherePigsFlyFms.Controllers
 
         public ActionResult EditAnimal(FarmViewModel model)
         {
-            model.BreedsList = 
+             
             return View("_RegisterAnimal", model);
         }
 
