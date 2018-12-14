@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WherePigsFlyFms.Models;
@@ -30,17 +29,20 @@ namespace WherePigsFlyFms.Utilities
             catch (Exception)
             {
 
-               
             }
-
             return model;
         }
 
         public IEnumerable<SelectListItem> GetPickList(List<PickListModel> pickList)
         {
             List<SelectListItem> list = new List<SelectListItem>();
-            return null;
 
+            foreach (var item in pickList)
+            {
+                list.Add(new SelectListItem { Text = item.Text, Value = item.Value.ToString()});
+            }
+
+            return new SelectList(list, "Value", "Text");
         }
     }
 }
