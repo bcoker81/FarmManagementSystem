@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using WherePigsFlyFms.Data;
 using WherePigsFlyFms.Toast;
 using WherePigsFlyFms.UnitOfWork;
+using WherePigsFlyFms.Utilities;
 using WherePigsFlyFms.ViewModels;
 
 namespace WherePigsFlyFms.Controllers
@@ -14,10 +15,14 @@ namespace WherePigsFlyFms.Controllers
         public ActionResult Index()
         {
             FarmViewModel viewModel = new FarmViewModel();
+            
             using (var context = new FmsDbContext())
             {
                 _uow = new FmsUoW(context);
-               
+                _util = new FmsUtilities();
+
+               viewModel.BreedsList = _util.GetPickList(_uow.PicklistRepo.FindMany(p => p.ListType == "Breed").ToList());
+
                 viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
                 foreach (var item in viewModel.Animals)
                 {
@@ -103,6 +108,7 @@ namespace WherePigsFlyFms.Controllers
 
         public ActionResult EditAnimal(FarmViewModel model)
         {
+            model.BreedsList = 
             return View("_RegisterAnimal", model);
         }
 

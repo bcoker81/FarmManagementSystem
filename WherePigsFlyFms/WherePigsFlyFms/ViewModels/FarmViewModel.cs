@@ -15,6 +15,7 @@ namespace WherePigsFlyFms.ViewModels
         public VaccinationModel Vaccine { get; set; }
         public List<SelectListItem> listValues; 
         public AttachmentModel Attachments { get; set; }
+        public IEnumerable<SelectListItem> BreedsList { get; set; }
         //public MedicalRecords MedicalRecord { get; set; }
         //public List<MedicalRecords> MedicalRecords { get; set; }
 

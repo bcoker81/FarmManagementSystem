@@ -15,11 +15,25 @@ namespace WherePigsFlyFms.UnitOfWork
         private GenericRepository<VaccinationModel> _vaccineRepo;
         private GenericRepository<MedLookupModel> _lookupRepo;
         private GenericRepository<AttachmentModel> _attachmentRepo;
+        private GenericRepository<PickListModel> _pickListRepo;
         private FmsDbContext _entities;
 
         public FmsUoW(FmsDbContext Entities)
         {
             _entities = Entities;
+        }
+
+        public GenericRepository<PickListModel> PickListRepo
+        {
+            get
+            {
+                if (_pickListRepo == null)
+                {
+                    _pickListRepo = new GenericRepository<PickListModel>(_entities);
+                }
+
+                return _pickListRepo;
+            }
         }
 
         public GenericRepository<Animals> AnimalRepo {
