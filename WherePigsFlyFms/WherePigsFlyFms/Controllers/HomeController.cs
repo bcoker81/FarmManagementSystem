@@ -34,7 +34,7 @@ namespace WherePigsFlyFms.Controllers
                     item.MedicalCount = recordCnt;
                 }
 
-                this.AddToastMessage("Success!", "Data retrieved from database!", ToastType.Success);
+                this.AddToastMessage("Animals...", "have been retrieved from the database.", ToastType.Success);
             }
             return View("Index", viewModel);
         }

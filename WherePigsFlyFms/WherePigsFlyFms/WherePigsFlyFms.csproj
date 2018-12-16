@@ -228,6 +228,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
+    <Compile Include="Models\EnumData.cs" />
     <Compile Include="Models\MedicalRecords.cs" />
     <Compile Include="Models\MedLookupModel.cs" />
     <Compile Include="Models\PickListModel.cs" />
