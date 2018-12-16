@@ -156,6 +156,7 @@
     <Compile Include="Controllers\ControllerExtensions.cs" />
     <Compile Include="Controllers\FarmBaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PickListAdminController.cs" />
     <Compile Include="Data\FmsDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -297,6 +298,7 @@
     <Content Include="Views\Shared\_NewMedicalHistory.cshtml" />
     <Content Include="Views\Home\SaveVaccineHistory.cshtml" />
     <Content Include="Views\Shared\_Attachment.cshtml" />
+    <Content Include="Views\PickListAdmin\PickListAdministration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

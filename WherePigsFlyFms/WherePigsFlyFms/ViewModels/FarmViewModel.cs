@@ -14,13 +14,13 @@ namespace WherePigsFlyFms.ViewModels
         public List<VaccinationModel> Vaccines { get; set; }
         public VaccinationModel Vaccine { get; set; }
         public List<SelectListItem> listValues; 
+        public List<PickListModel> PickLists { get; set; }
+        public PickListModel Picklist { get; set; }
         public AttachmentModel Attachments { get; set; }
         public IEnumerable<SelectListItem> BreedsList { get; set; }
         public IEnumerable<SelectListItem> AnimalTypeList { get; set; }
         public IEnumerable<SelectListItem> VaccinesList { get; set; }
         public IEnumerable<SelectListItem> StateList { get; set; }
-        //public MedicalRecords MedicalRecord { get; set; }
-        //public List<MedicalRecords> MedicalRecords { get; set; }
 
         public FarmViewModel()
         {
@@ -28,8 +28,8 @@ namespace WherePigsFlyFms.ViewModels
             Animal = new Animals();
             listValues = new List<SelectListItem>();
             Attachments = new AttachmentModel();
-            //MedicalRecord = new MedicalRecords();
-            //MedicalRecords = new List<MedicalRecords>();
+            Picklist = new PickListModel();
+            PickLists = new List<PickListModel>();
         }
     }
 }
