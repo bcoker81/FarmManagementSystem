@@ -132,13 +132,13 @@ namespace WherePigsFlyFms.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult SaveCode(PickListModel model)
+        public ActionResult SaveCode(FarmViewModel model)
         {
             using (var context = new FmsDbContext())
             {
                 _uow = new FmsUoW(context);
-
-                _uow.PickListRepo.Add(model);
+                model.Picklist.ListType = model.DropdownSelection.ToString();
+                _uow.PickListRepo.Add(model.Picklist);
                 _uow.Commit();
                 _uow = null;
             }
