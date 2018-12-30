@@ -10,7 +10,7 @@ namespace WherePigsFlyFms.Controllers
 {
     public class FarmBaseController : Controller
     {
-       public static IFmsUoW _uow;
+        public static IFmsUoW _uow = null;
         public static IFmsUtilities _util;
     }
 }
