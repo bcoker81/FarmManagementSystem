@@ -44,5 +44,13 @@ namespace WherePigsFlyFms.Utilities
 
             return new SelectList(list, "Value", "Text");
         }
+
+        public int GenerateIndexNumber(List<PickListModel> lists)
+        {
+            var indexNumber = lists.Count;
+            indexNumber++;
+
+            return indexNumber;
+        }
     }
 }

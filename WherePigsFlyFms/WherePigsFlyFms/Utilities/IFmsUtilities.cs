@@ -13,5 +13,6 @@ namespace WherePigsFlyFms.Utilities
     {
         AttachmentModel Upload(HttpPostedFileBase file, FarmViewModel viewModel);
         IEnumerable<SelectListItem> GetPickList(List<PickListModel> pickList);
+        int GenerateIndexNumber(List<PickListModel> lists);
     }
 }
