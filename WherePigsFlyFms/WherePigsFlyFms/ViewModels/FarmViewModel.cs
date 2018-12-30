@@ -22,6 +22,7 @@ namespace WherePigsFlyFms.ViewModels
         public IEnumerable<SelectListItem> VaccinesList { get; set; }
         public IEnumerable<SelectListItem> StateList { get; set; }
         public PickListType DropdownSelection { get; set; }
+        
         public FarmViewModel()
         {
             Animals = new List<Animals>();
