@@ -39,10 +39,6 @@ namespace WherePigsFlyFms.Controllers
                 {
                     viewModel.PickLists = _uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList();
                 }
-                else if (model.DropdownSelection == Models.PickListType.Breed)
-                {
-                    viewModel.PickLists = _uow.PickListRepo.FindMany(p => p.ListType == "Breed").ToList();
-                }
                 else if (model.DropdownSelection == Models.PickListType.ST)
                 {
                     viewModel.PickLists = _uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList();

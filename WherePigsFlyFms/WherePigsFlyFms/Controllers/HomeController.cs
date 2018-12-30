@@ -2,6 +2,7 @@
 using System.Web;
 using System.Web.Mvc;
 using WherePigsFlyFms.Data;
+using WherePigsFlyFms.Models;
 using WherePigsFlyFms.Toast;
 using WherePigsFlyFms.UnitOfWork;
 using WherePigsFlyFms.Utilities;
@@ -21,12 +22,14 @@ namespace WherePigsFlyFms.Controllers
                 _uow = new FmsUoW(context);
                 _util = new FmsUtilities();
 
-                viewModel.BreedsList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "Breed").ToList());
-                viewModel.AnimalTypeList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList());
+                //viewModel.BreedsList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "Breed").ToList());
+                var animalTypesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList());
+
                 viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
                 viewModel.StateList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList());
                 viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
-
+                var orderedAnimalTypes = animalTypesList.OrderBy(p => p.Text);
+                viewModel.AnimalTypeList = orderedAnimalTypes;
                 foreach (var item in viewModel.Animals)
                 {
                     var records = _uow.VaccineRepo.FindMany(p => p.FK_Animal_Id == item.Id);
@@ -35,6 +38,7 @@ namespace WherePigsFlyFms.Controllers
                 }
 
                 this.AddToastMessage("Animals...", "have been retrieved from the database.", ToastType.Success);
+                _uow = null;
             }
             return View("Index", viewModel);
         }
@@ -124,6 +128,19 @@ namespace WherePigsFlyFms.Controllers
                 var result = _uow.AnimalRepo.FindSingle(p => p.Id == id);
                 result.Archived = true;
                 _uow.Commit();
+            }
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult SaveCode(PickListModel model)
+        {
+            using (var context = new FmsDbContext())
+            {
+                _uow = new FmsUoW(context);
+
+                _uow.PickListRepo.Add(model);
+                _uow.Commit();
+                _uow = null;
             }
             return RedirectToAction("Index");
         }

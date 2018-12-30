@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201812141901390_UpdatedModelDefinitionForIntsForPickList.Designer.cs">
       <DependentUpon>201812141901390_UpdatedModelDefinitionForIntsForPickList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812300627238_UpdatedBreedBackToText.cs" />
+    <Compile Include="Migrations\201812300627238_UpdatedBreedBackToText.Designer.cs">
+      <DependentUpon>201812300627238_UpdatedBreedBackToText.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
@@ -300,6 +304,7 @@
     <Content Include="Views\Home\SaveVaccineHistory.cshtml" />
     <Content Include="Views\Shared\_Attachment.cshtml" />
     <Content Include="Views\PickListAdmin\PickListAdministration.cshtml" />
+    <Content Include="Views\Shared\_CodeMaintenance.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -366,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812141901390_UpdatedModelDefinitionForIntsForPickList.resx">
       <DependentUpon>201812141901390_UpdatedModelDefinitionForIntsForPickList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812300627238_UpdatedBreedBackToText.resx">
+      <DependentUpon>201812300627238_UpdatedBreedBackToText.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

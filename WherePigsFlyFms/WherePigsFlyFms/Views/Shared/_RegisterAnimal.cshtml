@@ -29,7 +29,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Animal.Breed, htmlAttributes: new { @class = "control-label col-sm-2" })
             <div class="col-sm-4">
-                @Html.DropDownListFor(m => m.Animal.Breed, Model.BreedsList, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Animal.Breed, new { @class = "control-label" })
             </div>
 
             @Html.LabelFor(model => model.Animal.Gender, htmlAttributes: new { @class = "control-label col-sm-2" })

@@ -12,7 +12,7 @@
         @Html.LabelFor(model => model.Vaccine.VaccineType, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.DropDownListFor(m => m.Vaccine.VaccineType, Model.listValues, new { @class = "form-control input-sm" })
-            @Html.DropDownListFor(m => m.Vaccine.VaccineType, Model.VaccinesList, new { htmlAttributes = new { @class = "form-control input-sm" } })
+            @*@Html.DropDownListFor(m => m.Vaccine.VaccineType, Model.VaccinesList, new { htmlAttributes = new { @class = "form-control input-sm" } })*@
             @*@Html.EditorFor(model => model.Vaccine.VaccineType, new { htmlAttributes = new { @class = "form-control" } })*@
             @Html.ValidationMessageFor(model => model.Vaccine.VaccineType, "", new { @class = "text-danger" })
         </div>

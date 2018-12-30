@@ -14,8 +14,6 @@ namespace WherePigsFlyFms.Models
     {
         [Display(Name ="ANIMAL TYPE")]
         AnimalType,
-        [Display(Name ="BREED")]
-        Breed,
         [Display(Name ="STATE")]
         ST,
         [Display(Name ="VACCINATION")]

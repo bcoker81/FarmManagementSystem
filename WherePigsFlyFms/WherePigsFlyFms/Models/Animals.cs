@@ -21,8 +21,8 @@ namespace WherePigsFlyFms.Models
         public string Name { get; set; }
         [Display(Name = "Tag Number")]
         public string TagNumber { get; set; }
-        public int Breed { get; set; }
-        //public string BreedText { get; set; }
+        //public int Breed { get; set; }
+        public string Breed { get; set; }
         [Required]
         public Gender Gender { get; set; }
         public Nullable<int> Weight { get; set; }
@@ -35,21 +35,21 @@ namespace WherePigsFlyFms.Models
         public Nullable<DateTime> DateAcquired { get; set; }
         [Display(Name = "Animal Type")]
         public int AnimalType { get; set; }
-        [Display(Name = "Doner Name")]
+        [Display(Name = "Donor Name")]
         public string NameOfDoner { get; set; }
-        [Display(Name = "Doner address number")]
+        [Display(Name = "Donor address number")]
         public string DonerAddress1 { get; set; }
-        [Display(Name = "Doner address street")]
+        [Display(Name = "Donor address street")]
         public string DonerAddress2 { get; set; }
-        [Display(Name = "Doner city")]
+        [Display(Name = "Donor city")]
         public string DonerCity { get; set; }
-        [Display(Name = "Doner state")]
+        [Display(Name = "Donor state")]
         public int DonerState { get; set; }
-        [Display(Name = "Doner zip")]
+        [Display(Name = "Donor zip")]
         public string DonerZip { get; set; }
-        [Display(Name = "Doner phone")]
+        [Display(Name = "Donor phone")]
         public string DonerPhone { get; set; }
-        [Display(Name = "Doner email")]
+        [Display(Name = "Donor email")]
         public string DonerEmail { get; set; }
         [Display(Name = "Date removed or sold")]
         [DataType(DataType.Date)]
