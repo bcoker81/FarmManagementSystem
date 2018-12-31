@@ -24,12 +24,15 @@ namespace WherePigsFlyFms.Controllers
 
                 //viewModel.BreedsList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "Breed").ToList());
                 var animalTypesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList());
-
-                viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
-                viewModel.StateList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList());
+                var vaccList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
+                //viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
+                var stateList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList());
                 viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
                 var orderedAnimalTypes = animalTypesList.OrderBy(p => p.Text);
+                var orderedStates = stateList.OrderBy(p => p.Text);
+                viewModel.StateList = orderedStates;
                 viewModel.AnimalTypeList = orderedAnimalTypes;
+                viewModel.VaccinesList = vaccList;
                 foreach (var item in viewModel.Animals)
                 {
                     var records = _uow.VaccineRepo.FindMany(p => p.FK_Animal_Id == item.Id);
