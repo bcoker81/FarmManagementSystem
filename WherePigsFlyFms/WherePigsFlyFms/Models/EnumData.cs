@@ -19,4 +19,16 @@ namespace WherePigsFlyFms.Models
         [Display(Name ="VACCINATION")]
         VAC
     }
+
+    public enum SearchSelectionType
+    {
+        [Display(Name ="NAME")]
+        name,
+        [Display(Name = "TAG NUMBER")]
+        tagnumber,
+        [Display(Name = "BREED")]
+        breed,
+        [Display(Name = "TYPE")]
+        type
+    }
 }

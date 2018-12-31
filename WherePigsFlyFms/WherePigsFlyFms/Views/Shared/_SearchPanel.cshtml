@@ -1,0 +1,17 @@
+﻿@model WherePigsFlyFms.ViewModels.FarmViewModel
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-1"><b>Search:</b></div>
+                    <div class="col-sm-2">@Html.EditorFor(model => model.SearchModel.SearchString, new { @class = "form-control" })</div>
+                    <div class="col-sm-2">@Html.EnumDropDownListFor(p => p.SearchSelectionType, Model.SearchModel.SearchType.ToString(), new { @class = "form-control" })</div>
+                    <div class="col-sm-2"><input type="submit" value="Go!" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
