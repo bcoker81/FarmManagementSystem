@@ -30,23 +30,13 @@ namespace WherePigsFlyFms.Controllers
         public ActionResult CodeSelectionIndex(FarmViewModel model)
         {
             FarmViewModel viewModel = new FarmViewModel();
-
+            
             using (var context = new FmsDbContext())
             {
                 _uow = new FmsUoW(context);
 
-                if (model.DropdownSelection == Models.PickListType.AnimalType)
-                {
-                    viewModel.PickLists = _uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList();
-                }
-                else if (model.DropdownSelection == Models.PickListType.ST)
-                {
-                    viewModel.PickLists = _uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList();
-                }
-                else if (model.DropdownSelection == Models.PickListType.VAC)
-                {
-                    viewModel.PickLists = _uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList();
-                }
+                viewModel.PickLists = _uow.PickListRepo.GetAll().ToList();
+
             }
             return View("PickListAdministration", viewModel);
         }
