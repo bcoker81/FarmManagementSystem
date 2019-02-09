@@ -150,6 +150,7 @@ namespace WherePigsFlyFms.Controllers
                 _uow.Commit();
                 _uow = null;
             }
+            this.AddToastMessage("Success!", "New code added to the database.", ToastType.Success);
             return RedirectToAction("Index");
         }
 

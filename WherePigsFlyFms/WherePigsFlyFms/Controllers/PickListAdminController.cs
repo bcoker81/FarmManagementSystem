@@ -20,8 +20,8 @@ namespace WherePigsFlyFms.Controllers
             {
                 _uow = new FmsUoW(context);
 
-                //viewModel.PickLists = _uow.PickListRepo.GetAll().ToList();
-                this.AddToastMessage("Code Tables...", "Please select a list to modify.", ToastType.Success);
+                viewModel.PickLists = _uow.PickListRepo.GetAll().ToList();
+                this.AddToastMessage("Codes loaded successfully...", "User the search feature to improve your efficiency", ToastType.Success);
             }
 
             return View("PickListAdministration", viewModel);
