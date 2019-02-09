@@ -2,11 +2,11 @@
 
 <br />
 @Html.HiddenFor(model => model.Animal.Id)
-<div class="panel panel-default">
-    <div class="panel-heading"><h4 style="text-align:center;">Medical History</h4></div>
+<div class="panel panel">
+    <div class="panel-heading" style="background-color:#3c3c3c"><h3 style="text-align:center; color:antiquewhite;">Medical History</h3></div>
     <div class="panel-body">
         <br />
-        <a href="myModal" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">ADD VACCINE</a>
+        <a href="myModal" data-toggle="modal" data-target="#myModal"><input type="button"value="Add Vaccine" /></a>
         <br />
         <br />
         <table class="table table-striped table-condensed table-hover table-bordered">
@@ -25,6 +25,9 @@
             }
         </table>
     </div>
+    <div class="panel-footer" style="background-color:#3c3c3c">
+
+    </div>
 </div>
 
 
@@ -34,9 +37,9 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header" style="background-color:#3c3c3c">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">REGISTER NEW MEDICAL HISTORY</h4>
+                <h3 class="modal-title" style="color:antiquewhite;">Register new medical record</h3>
             </div>
             <div class="modal-body">
                 @Html.Partial("_NewMedicalHistory", Model)

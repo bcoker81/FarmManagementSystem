@@ -153,22 +153,5 @@ namespace WherePigsFlyFms.Controllers
             this.AddToastMessage("Success!", "New code added to the database.", ToastType.Success);
             return RedirectToAction("Index");
         }
-
-        public ActionResult Search(FarmViewModel model)
-        {
-            FarmViewModel viewModel = new FarmViewModel();
-            using (var context = new FmsDbContext())
-            {
-                if (_uow == null)
-                {
-                    _uow = new FmsUoW(context);
-                }
-                var searchString = model.SearchModel.SearchString.ToUpper();
-                var result = _uow.AnimalRepo.FindMany(p => p.Name == searchString);
-                viewModel.SearchList = result.ToList();
-            }
-
-            return RedirectToAction("index", viewModel);
-        }
     }
 }
