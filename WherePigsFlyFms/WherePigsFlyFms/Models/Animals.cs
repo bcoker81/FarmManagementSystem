@@ -23,6 +23,10 @@ namespace WherePigsFlyFms.Models
         public string TagNumber { get; set; }
         //public int Breed { get; set; }
         public string Breed { get; set; }
+        [NotMapped]
+        public string AnimalTypeText { get; set; }
+        [NotMapped]
+        public string DonerStateText { get; set; }
         [Required]
         public Gender Gender { get; set; }
         public Nullable<int> Weight { get; set; }

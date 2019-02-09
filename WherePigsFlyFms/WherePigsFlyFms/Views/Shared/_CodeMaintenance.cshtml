@@ -19,7 +19,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Picklist.ListType, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EnumDropDownListFor(model => model.DropdownSelection, Model.Picklist.ListType, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EnumDropDownListFor(model => model.DropdownSelection, Model.Picklist.ListType, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Picklist.ListType, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -44,10 +44,9 @@
         </div>
     </div>
     <div class="panel-footer">
-        <input type="submit" value="Create" class="btn btn-default" />
+        <input type="submit" value="Save Code" />
     </div>
 </div>
     @Html.HiddenFor(model => model.DropdownSelection)
-    
 }
 

@@ -16,16 +16,19 @@ namespace WherePigsFlyFms.Controllers
         public ActionResult Index()
         {
             FarmViewModel viewModel = new FarmViewModel();
-
+            _uow = null;
             using (var context = new FmsDbContext())
             {
-                _uow = new FmsUoW(context);
+                if (_uow == null)
+                {
+                    _uow = new FmsUoW(context);
+                }
                 _util = new FmsUtilities();
 
                 //viewModel.BreedsList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "Breed").ToList());
                 var animalTypesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "AnimalType").ToList());
                 var vaccList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
-                //viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
+                viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
                 var stateList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList());
                 viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
                 var orderedAnimalTypes = animalTypesList.OrderBy(p => p.Text);
@@ -38,6 +41,7 @@ namespace WherePigsFlyFms.Controllers
                     var records = _uow.VaccineRepo.FindMany(p => p.FK_Animal_Id == item.Id);
                     var recordCnt = records.Count();
                     item.MedicalCount = recordCnt;
+                    item.AnimalTypeText = GetAnimalType(item.AnimalType, "AnimalType");
                 }
 
                 this.AddToastMessage("Animals...", "have been retrieved from the database.", ToastType.Success);
@@ -87,6 +91,11 @@ namespace WherePigsFlyFms.Controllers
 
             using (var context = new FmsDbContext())
             {
+                if (_uow == null)
+                {
+                    _uow = new FmsUoW(context);
+                }
+
                 _uow = new FmsUoW(context);
                 var valueTypes = _uow.LookupRepo.GetAll().ToList();
                 foreach (var values in valueTypes)
@@ -97,10 +106,12 @@ namespace WherePigsFlyFms.Controllers
                 var result = _uow.AnimalRepo.FindSingle(p => p.Id == id);
                 viewModel.Vaccines = _uow.VaccineRepo.FindMany(p => p.FK_Animal_Id == id).ToList();
                 viewModel.Animal = result;
-                this.AddToastMessage("Success!", "Animal retrieved from database!", ToastType.Success);
+                viewModel.Animal.AnimalTypeText = GetAnimalType(result.AnimalType, "AnimalType");
+                viewModel.Animal.DonerStateText = GetAnimalType(result.DonerState, "ST");
+                this.AddToastMessage("Success!", $"{result.Name}, retrieved from database!", ToastType.Success);
 
             }
-
+            _uow = null;
             return View("AnimalDetails", viewModel);
         }
 
@@ -152,6 +163,24 @@ namespace WherePigsFlyFms.Controllers
             }
             this.AddToastMessage("Success!", "New code added to the database.", ToastType.Success);
             return RedirectToAction("Index");
+        }
+
+        private string GetAnimalType(int index, string listType)
+        {
+            string value = string.Empty;
+            using (var context = new FmsDbContext())
+            {
+                if (_uow == null)
+                {
+                    _uow = new FmsUoW(context);
+                }
+
+                var lookupText = _uow.PickListRepo.FindMany(p => p.Value == index).Where(p => p.ListType == listType).First();
+                value = lookupText.Text;
+                this.AddToastMessage("Animal Type Initializer", "Gathering values....", ToastType.Info);
+            }
+
+            return value;
         }
     }
 }

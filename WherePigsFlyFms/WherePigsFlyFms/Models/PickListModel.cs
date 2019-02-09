@@ -13,8 +13,10 @@ namespace WherePigsFlyFms.Models
         [Key]
         public int Id { get; set; }
         public int Value { get; set; }
+        [Display(Name ="List Type")]
         public string ListType { get; set; }
         public string Text { get; set; }
+        [Display(Name ="Is Deleted")]
         public bool IsDeleted { get; set; }
     }
 }

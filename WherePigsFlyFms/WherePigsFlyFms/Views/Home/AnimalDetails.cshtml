@@ -76,7 +76,7 @@
 
                                 @Html.LabelFor(model => model.Animal.AnimalType, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.AnimalType, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                    @Html.DisplayFor(model => model.Animal.AnimalTypeText, new { htmlAttributes = new { @class = "form-control input-sm" } })
                                     @Html.ValidationMessageFor(model => model.Animal.AnimalType, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.Animal.DonerState, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerState, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                    @Html.DisplayFor(model => model.Animal.DonerStateText, new { htmlAttributes = new { @class = "form-control input-sm" } })
                                     @Html.ValidationMessageFor(model => model.Animal.DonerState, "", new { @class = "text-danger" })
                                 </div>
 

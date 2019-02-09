@@ -63,7 +63,7 @@
 
                 @Html.LabelFor(model => model.Animal.AnimalType, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-sm-4">
-                    @Html.DropDownListFor(m => m.Animal.AnimalType, Model.AnimalTypeList, new { @class = "control-label" })
+                    @Html.DropDownListFor(m => m.Animal.AnimalType, Model.AnimalTypeList, new { @class = "form-control" })
                 </div>
             </div>
 
@@ -98,7 +98,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Animal.DonerState, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-sm-4">
-                    @Html.DropDownListFor(m => m.Animal.DonerState, Model.StateList, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.DropDownListFor(m => m.Animal.DonerState, Model.StateList, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Animal.DonerState, "", new { @class = "text-danger" })
                 </div>
 
