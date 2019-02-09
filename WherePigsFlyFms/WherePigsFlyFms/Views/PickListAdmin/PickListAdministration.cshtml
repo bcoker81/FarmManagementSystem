@@ -18,42 +18,49 @@
         })
     </script>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                @Html.Partial("_menu")
+            </div>
+            <div class="col-md-10">
+                <div class="panel panel">
+                    <div class="panel-heading" style="background-color: #3c3c3c">
+                        <h3 style="text-align:center; color:antiquewhite">Code Management</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a href="myModal" data-toggle="modal" data-target="#myModal"><input type="button" value="Add Code" /></a>
+                        <br /><br />
+                        <table id="codeMaintenance" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>VALUE</th>
+                                    <th>LIST TYPE</th>
+                                    <th>TEXT</th>
+                                    <th>DELETED</th>
+                                    <th>MAINTENANCE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.PickLists)
+                                {
 
-    <div class="panel panel-default">
-        <div class="panel-heading small">
-            <h4 style="text-align:center;">Code Management</h4>
-        </div>
-        <div class="panel-body">
-            <a href="myModal" class="btn btn-default" data-toggle="modal" data-target="#myModal">ADD CODE</a>
-            <br /><br />
-            <table id="codeMaintenance" class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>VALUE</th>
-                        <th>LIST TYPE</th>
-                        <th>TEXT</th>
-                        <th>DELETED</th>
-                        <th>MAINTENANCE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.PickLists)
-                    {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.Value)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.ListType)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Text)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.IsDeleted)</td>
+                                        <td></td>
+                                    </tr>
 
-                        <tr>
-                            <td>@Html.DisplayFor(modelItem => item.Value)</td>
-                            <td>@Html.DisplayFor(modelItem => item.ListType)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Text)</td>
-                            <td>@Html.DisplayFor(modelItem => item.IsDeleted)</td>
-                            <td></td>
-                        </tr>
-
-                    }
-                </tbody>
-            </table>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
     <link href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
 
     @section scripts{
@@ -72,9 +79,9 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header" style="background-color: #3c3c3c">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">ADD CODE</h4>
+                <h4 class="modal-title" style="color:antiquewhite;">ADD CODE</h4>
             </div>
             <div class="modal-body">
                 @Html.Partial("_CodeMaintenance", Model)

@@ -98,7 +98,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Animal.DonerState, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-sm-4">
-                    @Html.DropDownListFor(m => m.Animal.DonerState, Model.StateList, new { @class = "control-label" })
+                    @Html.DropDownListFor(m => m.Animal.DonerState, Model.StateList, htmlAttributes: new { @class = "control-label col-md-2" })
                     @Html.ValidationMessageFor(model => model.Animal.DonerState, "", new { @class = "text-danger" })
                 </div>
 
@@ -145,7 +145,7 @@
                     @Html.ValidationMessageFor(model => model.Animal.PhotoUri, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-sm-3">
-                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#attachModal">Attach Photo</button>
+                    <button type="button" data-toggle="modal" data-target="#attachModal">Attach Photo</button>
                 </div>
             </div>
 

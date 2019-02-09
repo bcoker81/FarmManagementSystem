@@ -201,7 +201,6 @@ D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.A
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.AI.WindowsServer.xml
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.AI.Web.xml
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.initialdbcreatev1.resources
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.updateddatabase.resources
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.UpdateDatabaseToAcceptVaccinations.resources
@@ -224,3 +223,4 @@ D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csproj.CopyComplete
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.dll
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.pdb
+D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache

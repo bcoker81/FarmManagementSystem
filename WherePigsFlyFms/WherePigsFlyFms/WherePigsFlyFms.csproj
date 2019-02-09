@@ -308,6 +308,7 @@
     <Content Include="Views\Shared\_CodeMaintenance.cshtml" />
     <Content Include="Views\Shared\_SearchPanel.cshtml" />
     <Content Include="Views\Shared\_SearchResult.cshtml" />
+    <Content Include="Views\Shared\_menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
