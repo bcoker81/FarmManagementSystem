@@ -60,7 +60,7 @@
                                         <td>@Html.DisplayFor(modelItem => item.DateAcquired)</td>
                                         <td>@Html.DisplayFor(modelItem => item.AnimalTypeText)</td>
                                         <td style="text-align:center;">
-                                            <a href="@Url.Action("UpdateAnimal", "Animal", new { id = item.Id })"><input type="button" value="Modify" /></a>
+                                            <a href="@Url.Action("UpdateAnimalDetails", "Home", new { id = item.Id })"><input type="button" value="Modify" /></a>
                                         </td>
                                         <td><a href="@Url.Action("ViewAnimalDetails","Home", new { Id=item.Id })"><input type="button" value="Details" /></a></td>
                                     </tr>

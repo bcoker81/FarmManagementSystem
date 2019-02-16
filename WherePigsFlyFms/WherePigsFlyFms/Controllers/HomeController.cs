@@ -182,5 +182,11 @@ namespace WherePigsFlyFms.Controllers
 
             return value;
         }
+
+        public ActionResult UpdateAnimalDetails(FarmViewModel viewModel)
+        {
+            FarmViewModel model =  new FarmViewModel();
+            return View("_RegisterAnimal", model);
+        }
     }
 }
