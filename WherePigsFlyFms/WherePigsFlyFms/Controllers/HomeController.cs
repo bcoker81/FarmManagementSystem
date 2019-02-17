@@ -142,9 +142,11 @@ namespace WherePigsFlyFms.Controllers
             using (var context = new FmsDbContext())
             {
                 _uow = new FmsUoW(context);
+
                 var masterList = _uow.PickListRepo.FindMany(p => p.ListType == model.DropdownSelection.ToString()).ToList();
                 var newIndex = _util.GenerateIndexNumber(masterList);
                 model.Picklist.Value = newIndex;
+
                 model.Picklist.ListType = model.DropdownSelection.ToString();
                 _uow.PickListRepo.Add(model.Picklist);
                 _uow.Commit();
