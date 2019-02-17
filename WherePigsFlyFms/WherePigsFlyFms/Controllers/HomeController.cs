@@ -31,6 +31,7 @@ namespace WherePigsFlyFms.Controllers
                 viewModel.VaccinesList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "VAC").ToList());
                 var stateList = _util.GetPickList(_uow.PickListRepo.FindMany(p => p.ListType == "ST").ToList());
                 viewModel.Animals = _uow.AnimalRepo.FindMany(p => p.Archived == false).ToList();
+                var animalCount = viewModel.Animals.Count();
                 var orderedAnimalTypes = animalTypesList.OrderBy(p => p.Text);
                 var orderedStates = stateList.OrderBy(p => p.Text);
                 viewModel.StateList = orderedStates;
@@ -44,7 +45,7 @@ namespace WherePigsFlyFms.Controllers
                     item.AnimalTypeText = GetAnimalType(item.AnimalType, "AnimalType");
                 }
 
-                this.AddToastMessage("Animals...", "have been retrieved from the database.", ToastType.Success);
+                this.AddToastMessage("System Data Loaded", $"retrieved {animalCount} animals from the system.", ToastType.Info);
                 _uow = null;
             }
             return View("Index", viewModel);
@@ -58,14 +59,14 @@ namespace WherePigsFlyFms.Controllers
                 {
                     _uow = new FmsUoW(context);
                     var updateRecord = _uow.AnimalRepo.FindSingle(p => p.Id == model.Animal.Id);
-                    var lookupDesc = _uow.LookupRepo.FindSingle(p => p.LookupId == model.Vaccine.VaccineType);
-                    model.Vaccine.VaccineName = lookupDesc.Description;
+                    //var lookupDesc = _uow.LookupRepo.FindSingle(p => p.LookupId == model.Vaccine.VaccineType);
+                   // model.Vaccine.VaccineName = lookupDesc.Description;
                     model.Vaccine.FK_Animal_Id = model.Animal.Id;
                     _uow.VaccineRepo.Add(model.Vaccine);
                     _uow.Commit();
                 }
             }
-            this.AddToastMessage("Success!", "Animal medical history updated!", ToastType.Success);
+            this.AddToastMessage("Success!", $"Medical history for {model.Animal.Name} has been updated!", ToastType.Success);
             return RedirectToAction("Index");
         }
 
@@ -97,10 +98,10 @@ namespace WherePigsFlyFms.Controllers
                 }
 
                 _uow = new FmsUoW(context);
-                var valueTypes = _uow.LookupRepo.GetAll().ToList();
+                var valueTypes = _uow.PickListRepo.GetAll().Where(p => p.ListType == "VAC").ToList();
                 foreach (var values in valueTypes)
                 {
-                    viewModel.listValues.Add(new SelectListItem { Value = values.LookupId.ToString(), Text = values.Description });
+                    viewModel.listValues.Add(new SelectListItem { Value = values.Value.ToString(), Text = values.Text });
                 }
                 
                 var result = _uow.AnimalRepo.FindSingle(p => p.Id == id);
@@ -108,6 +109,7 @@ namespace WherePigsFlyFms.Controllers
                 viewModel.Animal = result;
                 viewModel.Animal.AnimalTypeText = GetAnimalType(result.AnimalType, "AnimalType");
                 viewModel.Animal.DonerStateText = GetAnimalType(result.DonerState, "ST");
+                
                 this.AddToastMessage("Success!", $"{result.Name}, retrieved from database!", ToastType.Success);
 
             }
@@ -177,7 +179,7 @@ namespace WherePigsFlyFms.Controllers
 
                 var lookupText = _uow.PickListRepo.FindMany(p => p.Value == index).Where(p => p.ListType == listType).First();
                 value = lookupText.Text;
-                this.AddToastMessage("Animal Type Initializer", "Gathering values....", ToastType.Info);
+                //this.AddToastMessage("Animal Type Initializer", "Reading animals type..", ToastType.Info);
             }
 
             return value;
@@ -187,6 +189,12 @@ namespace WherePigsFlyFms.Controllers
         {
             FarmViewModel model =  new FarmViewModel();
             return View("_RegisterAnimal", model);
+        }
+
+        private string GetPickListCodeDescription(string list, int index)
+        {
+
+            return string.Empty;
         }
     }
 }
