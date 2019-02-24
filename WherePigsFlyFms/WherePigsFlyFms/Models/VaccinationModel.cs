@@ -12,12 +12,16 @@ namespace WherePigsFlyFms.Models
     {
         [Key]
         public int VaccineId { get; set; }
-        public int VaccineType { get; set; }
+        [NotMapped]
+        public string VaccineTypeText { get; set; }
+        public string VaccineType { get; set; }
         public string VaccineName { get; set; }
         public string VaccineNotes { get; set; }
         [DataType(DataType.Date)]
         public DateTime VaccineDate { get; set; }
 
+        [NotMapped]
+        public string VacText { get; set; }
         public int FK_Animal_Id { get; set; }
         [ForeignKey("FK_Animal_Id")]
         public Animals Animals { get; set; }

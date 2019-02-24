@@ -104,7 +104,6 @@ C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedattachmenttable.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.changedattachmentdatatypetobytearray.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.binaryconvertedtovarchar.resources
-C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.archiveAnimal.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.addedwikiurltoanimal.resources
 C:\CokerGit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.AddingPicklistTable.resources
@@ -224,3 +223,7 @@ D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.dll
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.pdb
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.convertedvaccinetypetostring.resources
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\log4net.dll
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\log4net.xml

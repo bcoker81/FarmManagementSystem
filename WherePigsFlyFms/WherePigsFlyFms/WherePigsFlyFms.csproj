@@ -51,6 +51,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -229,6 +232,10 @@
     <Compile Include="Migrations\201812300627238_UpdatedBreedBackToText.Designer.cs">
       <DependentUpon>201812300627238_UpdatedBreedBackToText.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902200532065_convertedvaccinetypetostring.cs" />
+    <Compile Include="Migrations\201902200532065_convertedvaccinetypetostring.Designer.cs">
+      <DependentUpon>201902200532065_convertedvaccinetypetostring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
@@ -269,6 +276,7 @@
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <Content Include="App_Code\ToastrBuilder.cshtml" />
+    <Content Include="Log4Net.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -378,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812300627238_UpdatedBreedBackToText.resx">
       <DependentUpon>201812300627238_UpdatedBreedBackToText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200532065_convertedvaccinetypetostring.resx">
+      <DependentUpon>201902200532065_convertedvaccinetypetostring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

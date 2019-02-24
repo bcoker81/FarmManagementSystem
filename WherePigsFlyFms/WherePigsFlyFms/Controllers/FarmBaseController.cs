@@ -10,6 +10,8 @@ namespace WherePigsFlyFms.Controllers
 {
     public class FarmBaseController : Controller
     {
+        public static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public static IFmsUoW _uow = null;
         public static IFmsUtilities _util;
     }
