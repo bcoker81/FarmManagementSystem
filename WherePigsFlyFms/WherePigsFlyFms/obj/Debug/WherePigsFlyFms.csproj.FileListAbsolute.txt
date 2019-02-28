@@ -223,7 +223,7 @@ D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\Where
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.dll
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.pdb
 D:\cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
-C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.convertedvaccinetypetostring.resources
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\log4net.dll
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\log4net.xml
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
