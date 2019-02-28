@@ -22,7 +22,7 @@
                     <td>@Html.DisplayFor(modelItem => item.VaccineDate)</td>
                     <td>@Html.DisplayFor(modelItem => item.VaccineTypeText)</td>
                     <td>@Html.DisplayFor(modelItem => item.VaccineNotes)</td>
-                    <td><button><span class="glyphicon glyphicon-remove"></span> Remove</button></td>
+                    <td><a href="@Url.Action("RemoveMedicalHistory", "Home", new { id = item.VaccineId, animalId = Model.Animal.Id })"> <button><span class="glyphicon glyphicon-remove"></span> Remove</button></a></td>
                 </tr>
             }
         </table>

@@ -188,7 +188,21 @@ namespace WherePigsFlyFms.Controllers
             return RedirectToAction("Index");
         }
 
-       
+        public ActionResult RemoveMedicalHistory(int id, int animalId)
+        {
+            _uow = null;
+            using (var context = new FmsDbContext())
+            {
+                if (_uow == null)
+                {
+                    _uow = new FmsUoW(context);
+                }
+                var result = _uow.VaccineRepo.FindSingle(p => p.VaccineId == id);
+                _uow.VaccineRepo.Delete(result);
+                _uow.Commit();
+            }
+            return ViewAnimalDetails(animalId);
+        }
 
         private string GetAnimalType(int index, string listType)
         {
