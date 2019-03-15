@@ -288,3 +288,172 @@ System.ObjectDisposedException: The ObjectContext instance has been disposed and
    at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
    at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 35
+2019-03-08 18:08:12,814 [5] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/8/2019 6:08:12 PM 
+System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 32
+2019-03-08 18:08:13,335 [6] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/8/2019 6:08:13 PM 
+System.InvalidOperationException: The operation cannot be completed because the DbContext has been disposed.
+   at System.Data.Entity.Internal.LazyInternalContext.get_Connection()
+   at System.Data.Entity.Internal.InternalContext.get_ProviderFactory()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 32
+2019-03-10 11:42:00,687 [7] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 11:42:00 AM 
+System.InvalidOperationException: Internal connection fatal error. Error state: 15, Token : 20
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at System.Data.Common.DbDataReader.Dispose()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.Finally()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.Dispose()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 34
+2019-03-10 11:42:00,686 [6] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 11:42:00 AM 
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadChar(Char& value)
+   at System.Data.SqlClient.TdsParser.TryReadPlpUnicodeCharsChunk(Char[] buff, Int32 offst, Int32 len, TdsParserStateObject stateObj, Int32& charsRead)
+   at System.Data.SqlClient.TdsParser.TryReadPlpUnicodeChars(Char[]& buff, Int32 offst, Int32 len, TdsParserStateObject stateObj, Int32& totalCharsRead)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnData()
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.HandleEntityAppendOnly[TEntity](Func`2 constructEntityDelegate, EntityKey entityKey, EntitySet entitySet)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 34
+2019-03-10 11:42:00,850 [5] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 11:42:00 AM 
+System.ObjectDisposedException: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+   at System.Data.Entity.Core.Objects.ObjectContext.ReleaseConnection()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 33
+2019-03-10 12:01:54,377 [8] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 12:01:54 PM 
+System.InvalidOperationException: The model backing the 'FmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 32
+2019-03-10 12:02:02,411 [8] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 12:02:02 PM 
+System.InvalidOperationException: The model backing the 'FmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 32
+2019-03-10 12:03:26,140 [8] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 12:03:26 PM 
+System.InvalidOperationException: The model backing the 'FmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 32
+2019-03-10 17:36:35,242 [7] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 5:36:35 PM 
+System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 33
+2019-03-10 17:36:35,242 [5] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 5:36:35 PM 
+System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 33
+2019-03-10 17:36:35,355 [6] ERROR WherePigsFlyFms.Controllers.FarmBaseController - Error @:3/10/2019 5:36:35 PM 
+System.InvalidOperationException: The operation cannot be completed because the DbContext has been disposed.
+   at System.Data.Entity.Internal.LazyInternalContext.get_Connection()
+   at System.Data.Entity.Internal.InternalContext.get_ProviderFactory()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WherePigsFlyFms.Repository.GenericRepository`1.FindMany(Expression`1 predicate) in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Repository\GenericRepository.cs:line 44
+   at WherePigsFlyFms.Controllers.HomeController.Index() in C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\Controllers\HomeController.cs:line 33

@@ -7,6 +7,7 @@ using WherePigsFlyFms.Models;
 using WherePigsFlyFms.Toast;
 using WherePigsFlyFms.UnitOfWork;
 using WherePigsFlyFms.Utilities;
+using WherePigsFlyFms.Validators;
 using WherePigsFlyFms.ViewModels;
 
 namespace WherePigsFlyFms.Controllers
@@ -85,12 +86,17 @@ namespace WherePigsFlyFms.Controllers
 
         public ActionResult SaveAnimal(FarmViewModel model)
         {
+            AnimalValidator anVal = new AnimalValidator();
             try
             {
                 using (var context = new FmsDbContext())
                 {
                     if (model != null)
                     {
+                        if (! ModelState.IsValid)
+                        {
+                            var result = anVal.Validate(model.Animal);
+                        }
                         _uow = new FmsUoW(context);
                         _uow.AnimalRepo.Add(model.Animal);
                         _uow.Commit();

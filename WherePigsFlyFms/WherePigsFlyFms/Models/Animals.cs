@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using WherePigsFlyFms.Validators;
 
 namespace WherePigsFlyFms.Models
 {
@@ -12,14 +13,17 @@ namespace WherePigsFlyFms.Models
         Male, Female
     }
 
+    [FluentValidation.Attributes.Validator(typeof(AnimalValidator))]
     [Table("Animals")]
     public class Animals
     {
         [Key]
         public int Id { get; set; }
         [Required]
+        [MaxLength(20)]
         public string Name { get; set; }
         [Display(Name = "Tag Number")]
+        [MaxLength(15)]
         public string TagNumber { get; set; }
         //public int Breed { get; set; }
         public string Breed { get; set; }
