@@ -19,149 +19,56 @@
                     <div class="panel-body">
                         @Html.HiddenFor(model => model.Animal.Id)
 
-                        <div class="form-horizontal">
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.Name, htmlAttributes: new { @class = "control-label col-sm-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.Name, new { htmlAttributes = new { @class = "form-control input-sm input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.Name, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.TagNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.TagNumber, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.TagNumber, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.Breed, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.Breed, new { htmlAttributes = new { @class = "form-control input-sm" } })
-
-                                    @*@Html.DropDownListFor(model => model.SelectedBreed, Model.BreedSelection as IEnumerable<SelectListItem>, "Select a breed", new { @class = "form-control input-sm" })*@
-                                    @Html.ValidationMessageFor(model => model.Animal.Breed, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.Gender, new { @class = "form-control input-sm" })
-                                    @*@Html.DisplayFor(model => model.Animal.Gender, new { htmlAttributes = new { @class = "form-control input-sm" } })*@
-                                    @Html.ValidationMessageFor(model => model.Animal.Gender, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.Weight, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.Weight, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DateOfBirth, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DateOfBirth, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.DateAcquired, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DateAcquired, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DateAcquired, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.AnimalType, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.AnimalTypeText, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.AnimalType, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.NameOfDoner, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.NameOfDoner, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.NameOfDoner, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.DonerAddress1, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerAddress1, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerAddress1, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.DonerAddress2, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerAddress2, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerAddress2, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.DonerCity, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerCity, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerCity, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.DonerState, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerStateText, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerState, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.DonerZip, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerZip, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerZip, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.DonerPhone, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerPhone, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerPhone, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.DonerEmail, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DonerEmail, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DonerEmail, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.DateRemovedOrSold, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DateRemovedOrSold, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DateRemovedOrSold, "", new { @class = "text-danger" })
-                                </div>
-
-                                @Html.LabelFor(model => model.Animal.DateEuthenizedOrDied, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-4">
-                                    @Html.DisplayFor(model => model.Animal.DateEuthenizedOrDied, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                                    @Html.ValidationMessageFor(model => model.Animal.DateEuthenizedOrDied, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Animal.PhotoUri, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-sm-3">
-                                    @Html.DisplayFor(model => model.Animal.PhotoUri, new { htmlAttributes = new { @class = "form-control input-sm" } })
-
-                                    @Html.ValidationMessageFor(model => model.Animal.PhotoUri, "", new { @class = "text-danger" })
-                                </div>
-
-                            </div>
-
-                        </div>
+                        <table class="table table-condensed table-responsive">
+                            <tr>
+                                <th>@Html.LabelFor(model => model.Animal.Name)</th>
+                                <th>@Html.LabelFor(model => model.Animal.TagNumber)</th>
+                                <th>@Html.LabelFor(model => model.Animal.DateOfBirth)</th>
+                                <th>@Html.LabelFor(model => model.Animal.DateAcquired)</th>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.Animal.Name)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.TagNumber)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.DateOfBirth)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.DateAcquired)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.LabelFor(model => model.Animal.AnimalType)</th>
+                                <th>@Html.LabelFor(model => model.Animal.Breed)</th>
+                                <th>@Html.LabelFor(model => model.Animal.Gender)</th>
+                                <th>@Html.LabelFor(model => model.Animal.Weight)</th>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.Animal.AnimalTypeText)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.Breed)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.Gender)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.Weight)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.LabelFor(model => model.Animal.NameOfDoner)</th>
+                                <th>@Html.LabelFor(model => model.Animal.DonerAddress1)</th>
+                                <th>@Html.LabelFor(model => model.Animal.DonerCity)</th>
+                                <th>@Html.LabelFor(model => model.Animal.DonerState)</th>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.Animal.NameOfDoner)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.DonerAddress1)&nbsp;@Html.DisplayFor(model => model.Animal.DonerAddress2)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.DonerCity)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.DonerStateText) &nbsp; @Html.DisplayFor(model => model.Animal.DonerZip)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.LabelFor(model => model.Animal.DonerPhone)</th>
+                                <th>@Html.LabelFor(model => model.Animal.DonerEmail)</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.Animal.DonerPhone)</td>
+                                <td>@Html.DisplayFor(model => model.Animal.DonerEmail)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="panel-footer" style="background-color:#3c3c3c">
                         <div style="text-align:center;">
