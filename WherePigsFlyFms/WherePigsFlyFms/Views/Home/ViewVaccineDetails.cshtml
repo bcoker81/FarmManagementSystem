@@ -1,35 +1,29 @@
-﻿
-@model WherePigsFlyFms.ViewModels.FarmViewModel
+﻿@model WherePigsFlyFms.ViewModels.FarmViewModel
 
 <br />
 @Html.HiddenFor(model => model.Animal.Id)
 <div class="panel panel">
-    <div class="panel-heading" style="background-color:#3c3c3c"><h3 style="text-align:left; color:antiquewhite;">Medical History</h3></div>
+    <div class="panel-heading" style="background-color:#3c3c3c"><h3 style="text-align:left; color:antiquewhite;">Vaccine History</h3></div>
     <div class="panel-body">
         <br />
-        <a href="myModal" data-toggle="modal" data-target="#myModal"><input type="button" value="Add Medical Record" /></a>
+        <a href="myModal" data-toggle="modal" data-target="#myModal"><input type="button"value="Add Vaccine" /></a>
         <br />
         <br />
         <table class="table table-striped table-condensed table-hover">
             <tr>
-                <th>Incident Date</th>
-                <th>Incident Description</th>
-                <th>Resolution</th>
+                <th>Vaccine Date</th>
+                <th>Type</th>
                 <th>Notes</th>
-                <th>Vet Involved</th>
-                <th>Vet Location</th>
-
+                <th>Maintenance</th>
             </tr>
             @foreach (var item in Model.Vaccines)
             {
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.VaccineDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.VaccineTypeText)</td>
+                    <td>@Html.DisplayFor(modelItem => item.VaccineNotes)</td>
+                    <td><a href="@Url.Action("RemoveMedicalHistory", "Home", new { id = item.VaccineId, animalId = Model.Animal.Id })"> <button><span class="glyphicon glyphicon-remove"></span> Remove</button></a></td>
+                </tr>
             }
         </table>
     </div>
@@ -47,7 +41,7 @@
                 <h3 class="modal-title" style="color:antiquewhite;">Register new medical record</h3>
             </div>
             <div class="modal-body">
-                @Html.Partial("_NewMedicalHistory", Model)
+                @Html.Partial("_NewVaccineHistory", Model)
             </div>
         </div>
     </div>

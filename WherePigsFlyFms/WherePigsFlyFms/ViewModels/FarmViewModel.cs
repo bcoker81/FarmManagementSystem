@@ -21,6 +21,8 @@ namespace WherePigsFlyFms.ViewModels
         public IEnumerable<SelectListItem> AnimalTypeList { get; set; }
         public IEnumerable<SelectListItem> VaccinesList { get; set; }
         public IEnumerable<SelectListItem> StateList { get; set; }
+        public List<MedicalRecord> MedicalRecords { get; set; }
+        public MedicalRecord MedicalRecord { get; set; }
         public PickListType DropdownSelection { get; set; }
         public FarmViewModel()
         {
@@ -30,6 +32,8 @@ namespace WherePigsFlyFms.ViewModels
             Attachments = new AttachmentModel();
             Picklist = new PickListModel();
             PickLists = new List<PickListModel>();
+            MedicalRecords = new List<MedicalRecord>();
+            MedicalRecord = new MedicalRecord();
         }
     }
 }

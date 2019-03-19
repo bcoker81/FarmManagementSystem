@@ -338,8 +338,8 @@
     <Content Include="Views\Shared\_Toastr.cshtml" />
     <Content Include="Views\Shared\_RegisterAnimal.cshtml" />
     <Content Include="Views\Home\AnimalDetails.cshtml" />
-    <Content Include="Views\Home\ViewMedicalDetails.cshtml" />
-    <Content Include="Views\Shared\_NewMedicalHistory.cshtml" />
+    <Content Include="Views\Home\ViewVaccineDetails.cshtml" />
+    <Content Include="Views\Shared\_NewVaccineHistory.cshtml" />
     <Content Include="Views\Home\SaveVaccineHistory.cshtml" />
     <Content Include="Views\Shared\_Attachment.cshtml" />
     <Content Include="Views\PickListAdmin\PickListAdministration.cshtml" />
@@ -347,6 +347,8 @@
     <Content Include="Views\Shared\_SearchPanel.cshtml" />
     <Content Include="Views\Shared\_SearchResult.cshtml" />
     <Content Include="Views\Shared\_menu.cshtml" />
+    <Content Include="Views\Home\ViewMedicalDetails.cshtml" />
+    <Content Include="Views\Shared\_NewMedicalHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

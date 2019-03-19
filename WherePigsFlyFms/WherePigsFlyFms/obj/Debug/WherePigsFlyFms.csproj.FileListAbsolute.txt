@@ -237,3 +237,4 @@ C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\FluentValid
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\bin\System.ValueTuple.xml
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.AddingFluentValidationToDataModel.resources
 C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.Migrations.AddedNewMedicalRecordTableAndRelationships.resources
+C:\Cokergit\FarmManagementSystem\WherePigsFlyFms\WherePigsFlyFms\obj\Debug\WherePigsFlyFms.csprojAssemblyReference.cache
