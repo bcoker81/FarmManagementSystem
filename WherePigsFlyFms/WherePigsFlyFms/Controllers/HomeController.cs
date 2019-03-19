@@ -228,6 +228,33 @@ namespace WherePigsFlyFms.Controllers
             return value;
         }
 
+        public ActionResult ArchiveAnimal(int id)
+        {
+            FarmViewModel model = new FarmViewModel();
+
+            try
+            {
+                using (var context = new FmsDbContext())
+                {
+                    if (_uow == null)
+                    {
+                        _uow = new FmsUoW(context);
+                    }
+
+                    model.Animal = _uow.AnimalRepo.FindSingle(p => p.Id == id);
+                    model.Animal.Archived = true;
+                    _uow.Commit();
+                    this.AddToastMessage($"Archived {model.Animal.Name}", "Animal is still in the database for retention.", ToastType.Info); 
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error($"Error @:{DateTime.Now} ", ex);
+            }
+
+            return Index();
+        }
+
         public ActionResult UpdateAnimalDetails(int id)
         {
             FarmViewModel model = new FarmViewModel();
