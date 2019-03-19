@@ -258,10 +258,15 @@
     <Compile Include="Migrations\201903101704007_AddingFluentValidationToDataModel.Designer.cs">
       <DependentUpon>201903101704007_AddingFluentValidationToDataModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903191637358_AddedNewMedicalRecordTableAndRelationships.cs" />
+    <Compile Include="Migrations\201903191637358_AddedNewMedicalRecordTableAndRelationships.Designer.cs">
+      <DependentUpon>201903191637358_AddedNewMedicalRecordTableAndRelationships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animals.cs" />
     <Compile Include="Models\AttachmentModel.cs" />
     <Compile Include="Models\EnumData.cs" />
+    <Compile Include="Models\MedicalRecord.cs" />
     <Compile Include="Models\MedicalRecords.cs" />
     <Compile Include="Models\MedLookupModel.cs" />
     <Compile Include="Models\PickListModel.cs" />
@@ -416,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903101704007_AddingFluentValidationToDataModel.resx">
       <DependentUpon>201903101704007_AddingFluentValidationToDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903191637358_AddedNewMedicalRecordTableAndRelationships.resx">
+      <DependentUpon>201903191637358_AddedNewMedicalRecordTableAndRelationships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

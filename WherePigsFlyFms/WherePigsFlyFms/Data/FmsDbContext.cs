@@ -20,5 +20,6 @@ namespace WherePigsFlyFms.Data
         public DbSet<MedLookupModel> LookupValues { get; set; }
         public DbSet<AttachmentModel> Attachments { get; set; }
         public DbSet<PickListModel> PickList { get; set; }
+        public DbSet<MedicalRecord> MedicalRecords { get; set; }
     }
 }

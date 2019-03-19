@@ -74,6 +74,7 @@ namespace WherePigsFlyFms.Models
         public string WikiLinkUri { get; set; }
         public ICollection<AttachmentModel> Attachments { get; set; }
         public ICollection<VaccinationModel> Vaccines { get; set; }
+        public ICollection<MedicalRecord> MedicalHistory { get; set; }
         //public ICollection<MedicalRecords> MedicalRecords { get; set; }
     }
 }
