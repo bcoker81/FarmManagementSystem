@@ -86,7 +86,7 @@ namespace WherePigsFlyFms.Controllers
 
         public ActionResult SaveAnimal(FarmViewModel model)
         {
-            AnimalValidator anVal = new AnimalValidator();
+            //AnimalValidator anVal = new AnimalValidator();
             try
             {
                 using (var context = new FmsDbContext())
@@ -95,7 +95,7 @@ namespace WherePigsFlyFms.Controllers
                     {
                         if (! ModelState.IsValid)
                         {
-                            var result = anVal.Validate(model.Animal);
+                            //var result = anVal.Validate(model.Animal);
                         }
                         _uow = new FmsUoW(context);
                         _uow.AnimalRepo.Add(model.Animal);

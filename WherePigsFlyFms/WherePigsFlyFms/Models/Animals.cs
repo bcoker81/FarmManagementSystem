@@ -13,7 +13,7 @@ namespace WherePigsFlyFms.Models
         Male, Female
     }
 
-    [FluentValidation.Attributes.Validator(typeof(AnimalValidator))]
+    //[FluentValidation.Attributes.Validator(typeof(AnimalValidator))]
     [Table("Animals")]
     public class Animals
     {
